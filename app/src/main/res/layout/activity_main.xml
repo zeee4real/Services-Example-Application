@@ -6,10 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/randomNumberTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:padding="12dp"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
     <Button
         android:id="@+id/startServiceBtn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/randomNumberTV"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="12dp"
         android:layout_width="match_parent"
@@ -24,5 +35,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="12dp"
         app:layout_constraintTop_toBottomOf="@+id/startServiceBtn"/>
+    <Button
+        android:id="@+id/bindServiceBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bind Service"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/stopServiceBtn"/>
+    <Button
+        android:id="@+id/unbindServiceBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unbind Service"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/bindServiceBtn"/>
+    <Button
+        android:id="@+id/getRandomNumberBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Get Random Number"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/unbindServiceBtn"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

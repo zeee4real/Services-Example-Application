@@ -24,6 +24,7 @@ class MyService : Service() {
     private val binder: IBinder = MyServiceBinder()
 
     override fun onBind(p0: Intent?): IBinder? {
+        Log.i(TAG, "In onBind^ " + Thread.currentThread().id)
         return binder
     }
 
@@ -63,7 +64,7 @@ class MyService : Service() {
         isRandomNumberGeneratorOn = false
     }
 
-    private fun getRandomNumber(): Int = randomNumber
+    fun getRandomNumber(): Int = randomNumber
 
     override fun onUnbind(intent: Intent?): Boolean {
         Log.i(TAG, "In onUnbind")
