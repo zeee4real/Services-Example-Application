@@ -23,5 +23,9 @@ class MainActivity : AppCompatActivity() {
         startServiceBtn.setOnClickListener {
             startService(serviceIntent)
         }
+
+        stopServiceBtn.setOnClickListener {
+            stopService(serviceIntent)
+        }
     }
 }
