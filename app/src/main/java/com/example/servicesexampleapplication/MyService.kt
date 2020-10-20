@@ -24,7 +24,7 @@ class MyService : Service() {
     private val binder: IBinder = MyServiceBinder()
 
     override fun onBind(p0: Intent?): IBinder? {
-        Log.i(TAG, "In onBind^ " + Thread.currentThread().id)
+        Log.i(TAG, "In onBind " + Thread.currentThread().id)
         return binder
     }
 

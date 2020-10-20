@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         serviceIntent = Intent(this, MyService::class.java)
         startServiceBtn.setOnClickListener {
+            Log.i(TAG, "Service started on thread " + Thread.currentThread().id)
             startService(serviceIntent)
         }
 
